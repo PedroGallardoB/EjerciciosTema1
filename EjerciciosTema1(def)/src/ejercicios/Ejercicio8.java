@@ -10,6 +10,8 @@ public class Ejercicio8 {
 		int numNin;// Variable que almacena la cantidad de entradas de niño
 		double descuento;// Variable que guardará el resultado del ternario qur aplica el descuento
 		double total;// Variable que almacena el precio total de entradas sin descuento
+		final double PRENIÑ = 15.5;
+		final double PREADULT = 20;
 		Scanner sc = new Scanner(System.in);// Nombramos al escáner
 
 		System.out.println("Introduzca el número de entradas de adulto");// Solicitamos al usuario intoducir la cantidad
@@ -19,7 +21,7 @@ public class Ejercicio8 {
 																		// de entradas de niño
 		numNin = sc.nextInt();// Leemos la cantidad de entradas de niño
 
-		total = numNin * 15.5 + numAdulto * 20;// Calculamos el precio total sin descuento
+		total = numNin * PRENIÑ + numAdulto * PREADULT;// Calculamos el precio total sin descuento
 		descuento = total >= 100 ? total - (total * 5 / 100) : total;// Con un ternario aplicamos el descuento solo si
 																		// el precio es igual o menor a 100 euros
 
